@@ -9,13 +9,15 @@ class DashboardController extends Controller
     public static $data = [];
     public function __construct()
     {
-        self::$data['title'] = 'Store';
+        self::$data['app_name'] = 'Store';
     }
 
     public function index()
     {
-        return view('dashboard',[
+        self::$data['title'] = 'Dashboard';
+        return view('dashboard.index',[
             'user'  =>  'Bahaa Mohammed',
+            'app_name' =>  self::$data['app_name'],
             'title' =>  self::$data['title']
         ]);
     }
