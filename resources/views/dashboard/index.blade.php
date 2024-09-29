@@ -1,4 +1,7 @@
 @extends('dashboard.layouts.master')
+@push('css')
+
+@endpush
 @section('breadcrumb')
     @parent
     <li class="breadcrumb-item active">{{$title ?? ''}}</li>
@@ -69,3 +72,6 @@
     </div>
     <!-- /.content -->
 @endsection
+@push('js')
+
+@endpush
